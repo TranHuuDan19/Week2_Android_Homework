@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_welcome">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="Skip"
+        android:textAllCaps="false"
+        android:textColor="@color/orange"
+        android:textSize="14sp"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/sofia_pro_soft_regular"
+        android:text="Welcome to"
+        android:textColor="@color/bunker"
+        android:textSize="53sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_food_hub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/sofia_pro_soft_regular"
+        android:text="Food hub"
+        android:textColor="@color/orange"
+        android:textSize="45sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_welcome"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sofia_pro_regular"
+        android:lines="2"
+        android:text="Your favourite foods delivered fast at your door."
+        android:textColor="@color/oxford_blue"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_food_hub"
+        app:layout_constraintTop_toBottomOf="@+id/tv_food_hub" />
+
+    <TextView
+        android:id="@+id/tv_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:text="sign in with"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view_left_bar"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_sign_in"
+        app:layout_constraintEnd_toStartOf="@+id/tv_sign_in"
+        app:layout_constraintStart_toStartOf="@+id/btn_facebook"
+        app:layout_constraintTop_toTopOf="@+id/tv_sign_in" />
+
+    <View
+        android:id="@+id/view_right_bar"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_sign_in"
+        app:layout_constraintEnd_toEndOf="@+id/btn_google"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_sign_in"
+        app:layout_constraintTop_toTopOf="@+id/tv_sign_in" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:paddingVertical="10dp"
+        android:text="Start with email or phone"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:backgroundTint="@color/background_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_facebook"
+        android:layout_width="166dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:paddingHorizontal="22dp"
+        android:paddingVertical="10dp"
+        android:text="Facebook"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:backgroundTint="@color/white"
+        app:icon="@drawable/icon_facebook"
+        app:iconGravity="textStart"
+        app:iconTint="@null"
+        app:layout_constraintBottom_toTopOf="@id/btn_start"
+        app:layout_constraintEnd_toStartOf="@id/btn_google"
+        app:layout_constraintStart_toStartOf="@+id/btn_start" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_google"
+        android:layout_width="170dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:paddingHorizontal="22dp"
+        android:paddingVertical="10dp"
+        android:text="Google"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:backgroundTint="@color/white"
+        app:icon="@drawable/icon_google"
+        app:iconGravity="textStart"
+        app:iconTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start"
+        app:layout_constraintEnd_toEndOf="@+id/btn_start"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_facebook" />
+
+    <TextView
+        android:id="@+id/tv_have_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/sofia_pro_regular"
+        android:lines="2"
+        android:text="Already have an account?"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_start"
+        app:layout_constraintStart_toStartOf="@+id/btn_start"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start" />
+
+    <TextView
+        android:id="@+id/btn_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/sofia_pro_medium"
+        android:lines="2"
+        android:text="@string/sign_in_underline"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_have_account"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
