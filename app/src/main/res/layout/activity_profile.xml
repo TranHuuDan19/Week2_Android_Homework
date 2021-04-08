@@ -33,29 +33,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/avatar" />
 
+
     <TextView
-        android:id="@+id/tvName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:fontFamily="@font/sofia_pro_semi_bold"
-        android:text="Name"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:id="@+id/tv_EditProfile"
+        android:layout_width="80dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:text="  Profile"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_avatar" />
-
-    <TextView
-        android:id="@+id/tvEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Edit Profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvName" />
-
 
     <TextView
         android:id="@+id/tv_full_name"
@@ -67,7 +56,7 @@
         android:textColor="@color/manatee"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_EditProfile" />
 
     <TextView
         android:id="@+id/tv_email"
@@ -91,7 +80,8 @@
         android:textColor="@color/manatee"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@+id/edt_email"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edt_full_name"
@@ -104,10 +94,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_full_name">
-
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_full_name_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Cristiano Ronaldo"
             android:fontFamily="@font/sofia_pro_medium"
             android:inputType="text"
             android:hint="Your full name" />
@@ -127,10 +118,12 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_email">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_email_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sofia_pro_medium"
             android:inputType="text"
+            android:text="ronaldo@gmail.com"
             android:hint="Your E-mail" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -147,10 +140,12 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_phone">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_phone_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sofia_pro_medium"
             android:inputType="text"
+            android:text="6969696969"
             android:hint="Your phone" />
 
     </com.google.android.material.textfield.TextInputLayout>

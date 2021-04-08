@@ -9,8 +9,8 @@ class Onboarding_one : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding_one)
-        val btn = findViewById<ImageButton>(R.id.btn_next)
-        btn.setOnClickListener {
+        val btn1 = findViewById<ImageButton>(R.id.btn_next1)
+        btn1.setOnClickListener {
             val intent = Intent(this,Onboarding_two::class.java)
             startActivity(intent)
         }
