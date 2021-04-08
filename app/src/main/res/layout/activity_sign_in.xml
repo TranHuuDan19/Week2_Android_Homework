@@ -202,14 +202,15 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_facebook"
-        android:layout_width="199dp"
-        android:layout_height="61dp"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/sofia_pro_medium"
         android:paddingHorizontal="30dp"
         android:paddingVertical="10dp"
         android:text="Facebook"
+        android:textSize="10sp"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
         app:icon="@drawable/icon_facebook"
@@ -221,8 +222,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_google"
-        android:layout_width="171dp"
-        android:layout_height="56dp"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/rounded_button"
@@ -230,6 +231,7 @@
         android:paddingHorizontal="30dp"
         android:paddingVertical="10dp"
         android:text="Google"
+        android:textSize="10sp"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
         app:icon="@drawable/icon_google"

@@ -36,11 +36,11 @@
 
     <TextView
         android:id="@+id/tv_EditProfile"
-        android:layout_width="80dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="61dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
         android:text="  Profile"
-        android:textSize="22sp"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

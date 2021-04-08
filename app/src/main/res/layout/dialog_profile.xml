@@ -9,5 +9,6 @@
         android:layout_height="40dp"
         android:background="@android:color/transparent"
         android:hint="Edit Your Information Here!!!"
+        android:textSize="13sp"
         android:paddingLeft="22dp" />
 </LinearLayout>
