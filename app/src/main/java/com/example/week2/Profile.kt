@@ -6,28 +6,26 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.adapters.ViewBindingAdapter
+import androidx.lifecycle.ViewModelProvider
+import com.example.week2.databinding.ActivityProfileBinding
 
 class Profile : AppCompatActivity() {
+    private lateinit var binding: ActivityProfileBinding
+    private lateinit var viewModel: ProfileViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
-        val TextView_Email =findViewById<TextView>(R.id.edt_email_input)
-        val TextView_Fullname= findViewById<TextView>(R.id.edt_full_name_input)
-        val TextView_Phone=findViewById<TextView>(R.id.edt_phone_input)
-
-        val bundle =intent.extras
-        bundle?.let{
-            val userInformation =bundle.getParcelable<UserInformationData>("userInformation")
-            TextView_Email.text   = String.format("%S",userInformation?.email)
-            TextView_Fullname.text= String.format("%S",userInformation?.fullName)
-            TextView_Phone.text   = String.format("%S",userInformation?.phoneNumber)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_profile)
+        viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
+        binding.btnBack.setOnClickListener {
+            viewModel.account.name = binding.edtFullName.editText.toString().trim()
+            viewModel.account.email = binding.edtEmail.editText.toString().trim()
+            viewModel.account.password = binding.edtPhone.toString().trim()
         }
-            DialogProfileF(TextView_Fullname, "Name")
-            DialogProfileF(TextView_Phone, "Phone Number")
-            DialogProfileF(TextView_Email,"Email")
     }
-    fun DialogProfileF(TextviewDPF: TextView, title:String)
-    {
+
+    fun DialogProfileF(TextviewDPF: TextView, title: String) {
         TextviewDPF.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             val inflater = layoutInflater
